@@ -1,0 +1,23 @@
+set nocompatible
+set encoding=utf-8
+set clipboard=unnamed
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+set number
+set ruler
+set showcmd
+set smartindent
+set autoindent
+set backspace=2
+set hidden
+set nohlsearch
+set incsearch
+set ignorecase
+set smartcase
+set wildmenu
+set laststatus=2
+colorscheme default
+syntax on
+filetype plugin indent on
