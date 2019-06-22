@@ -130,6 +130,9 @@
 (use-package rust-mode
   :hook (rust-mode . lsp))
 
+(use-package cargo
+  :hook (rust-mode . cargo-minor-mode))
+
 (use-package cc-mode
   :hook ((c-mode . lsp)
          (c++-mode . lsp))
