@@ -121,11 +121,11 @@
          ("\\.markdown\\'" . markdown-mode))
   :init (setq markdown-command "multimarkdown"))
 
+(use-package python
+  :defer t)
+
 (use-package lsp-mode
   :commands lsp)
-
-(use-package python
-  :hook (python-mode . lsp))
 
 (use-package rust-mode
   :hook (rust-mode . lsp))
@@ -184,6 +184,12 @@
 (use-package company-lsp
   :init
   (add-to-list 'company-backends 'company-lsp))
+
+(use-package company-jedi
+  :init
+  (add-to-list 'company-backends 'company-jedi)
+  :bind (:map python-mode-map
+              ("M-." . jedi:goto-definition)))
 
 (use-package yasnippet
   :config
