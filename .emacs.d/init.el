@@ -233,6 +233,8 @@
   (global-undo-tree-mode 1))
 
 (use-package elec-pair
+  :init
+  (setq electric-pair-skip-self t)
   :config
   (electric-pair-mode 1))
 
