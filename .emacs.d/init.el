@@ -196,8 +196,7 @@
   (yas-global-mode 1))
 
 (use-package rainbow-delimiters
-  :hook ((emacs-lisp-mode . rainbow-delimiters-mode)
-         (clojure-mode . rainbow-delimiters-mode)))
+  :hook ((emacs-lisp-mode . rainbow-delimiters-mode)))
 
 (use-package exec-path-from-shell
   :init
@@ -231,12 +230,6 @@
   :diminish undo-tree-mode
   :config
   (global-undo-tree-mode 1))
-
-(use-package elec-pair
-  :init
-  (setq electric-pair-skip-self t)
-  :config
-  (electric-pair-mode 1))
 
 (use-package autorevert
   :diminish auto-revert-mode
