@@ -10,10 +10,15 @@
 (eval-when-compile
   (require 'use-package))
 
-(use-package zenburn-theme
+(use-package doom-themes
   :ensure t
   :config
-  (load-theme 'zenburn t))
+  (load-theme 'doom-one t))
+
+(use-package doom-modeline
+  :ensure t
+  :config
+  (doom-modeline-mode 1))
 
 (tool-bar-mode 0)
 (scroll-bar-mode 0)
@@ -239,7 +244,8 @@
   (global-auto-revert-mode 1))
 
 (use-package hl-line
-  :hook (prog-mode . hl-line-mode))
+  :config
+  (global-hl-line-mode 1))
 
 (use-package git-gutter-fringe
   :demand t
